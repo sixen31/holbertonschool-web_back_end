@@ -9,7 +9,7 @@ from typing import Callable
 
 def make_multiplier(multiplier: float) -> Callable[[float], float]:
     """
-    Creates a multiplier function that multiplies a float by the given multiplier.
+    Create multiplies a float by the given multiplier.
     """
     def multiplier_function(number: float) -> float:
         """
