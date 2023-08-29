@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
 """
-function measure the runtime of wait_n and calculate the average time
+function to measure the runtime of wait_n and calculate the average
 """
 
 
-import time
 import asyncio
+import time
 from typing import Callable
 
 
 wait_n = __import__('1-concurrent_coroutines').wait_n
 
+
 def measure_time(n: int, max_delay: int, fn: Callable = wait_n) -> float:
     """
-execution time for wait_n(n, max_delay) and returns average time per coroutine
+    Measures the total execution time for wait_n and returns average time
     """
     start_time = time.time()
     asyncio.run(fn(n, max_delay))
