@@ -12,6 +12,5 @@ async def task_wait_n(n: int, max_delay: int) -> List[float]:
     """
     Function that returns a list of delays in ascending order
     """
-    delays = [await task_wait_random(max_delay) for i in range(n)]
-    delays.sort()
-    return delays
+    delays = [await task_wait_random(max_delay) for _ in range(n)]
+    return sorted(delays)
